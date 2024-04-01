@@ -4,7 +4,12 @@
 /* Main */
 
 body {
+    margin: 0;
+    font-family: "IBM Plex Serif", serif;
     background-color: #4A4E69;
+    font-weight: 600;
+    font-size: 20px;
+    color: #fff;
 }
 
 header, footer {
