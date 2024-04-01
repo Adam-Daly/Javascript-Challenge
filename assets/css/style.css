@@ -14,8 +14,23 @@ body {
 
 header, footer {
     background-color: #22223B;
+    padding: 20px;
+    text-align: center;
 }
 
+header {
+    top: 0;
+    width: 100%;
+    margin-bottom: 20px;
+    display: grid;
+    place-items: center;
+}
+
+footer {
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+}
 
 /* Media Query - Tablet Targetting */
 
