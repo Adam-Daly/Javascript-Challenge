@@ -32,6 +32,19 @@ footer {
     position: fixed;
 }
 
+main {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-bottom: 20px;
+    background-color: #575f7c;
+}
+
+h2, h3 {
+    font-weight: 600;
+}
+
 /* Media Query - Tablet Targetting */
 
 
