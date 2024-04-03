@@ -58,6 +58,27 @@ h2, h3 {
     font-size: 16px;
 }
 
+#quiz-content {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+#answers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.answer {
+    background-color: #656e8d;
+    padding: 20px;
+    display: grid;
+    place-items: center;
+}
+
 /* Media Query - Tablet Targetting */
 
 
