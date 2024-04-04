@@ -79,6 +79,33 @@ h2, h3 {
     place-items: center;
 }
 
+#score-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+#scores {
+    display: grid;
+    gap: 10px;
+}
+
+.score {
+    background-color: #656e8d;
+    padding: 10px;
+    display: grid;
+    place-items: center;
+}
+
+.score h3 {
+    margin-top: 0;
+    
+}
+
+.score p {
+    padding: 20px;
+}
+
 /* Media Query - Tablet Targetting */
 
 
