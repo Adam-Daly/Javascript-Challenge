@@ -106,6 +106,28 @@ h2, h3 {
     padding: 20px;
 }
 
+#mascot {
+    background-color: #656e8d;
+    padding: 20px;
+    display: grid;
+    gap: 10px;
+    place-items: center;
+}
+
+#mascot img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: fill;
+}
+
+.correct {
+    background-color: #217961 !important;
+  }
+  
+.incorrect {
+      background-color: #b72d3a !important;
+  }
+
 /* Media Query - Tablet Targetting */
 
 
