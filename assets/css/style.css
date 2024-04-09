@@ -146,6 +146,27 @@ h2, h3 {
     object-fit: fill;
 }
 
+#quiz-utility {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    background-color:#575f7c;
+    padding: 0px 20px 20px 20px;
+}
+
+.utilities {
+    display: grid;
+    gap: 10px;
+    background-color:#656e8d;
+}
+
+.utility {
+    padding: 10px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
 .correct {
     background-color: #217961 !important;
   }
