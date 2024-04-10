@@ -95,6 +95,8 @@ h2, h3 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
+    border-color: #656e8d;
+    border-style: solid;
     padding: 10px;
 }
 
@@ -107,6 +109,10 @@ h2, h3 {
 
 .answer:hover {
     background-color: #4A4E69;
+}
+
+.answer p {
+    text-align: center;
 }
 
 #score-container {
@@ -231,5 +237,3 @@ h2, h3 {
         grid-template-columns: 1fr;
     }
 }
-
-
