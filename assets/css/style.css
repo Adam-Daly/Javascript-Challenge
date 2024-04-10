@@ -185,7 +185,51 @@ h2, h3 {
 
 /* Media Query - Tablet Targetting */
 
+@media (max-width: 768px) {
+    header {
+        margin-bottom: 2vw; 
+    }
+    main {
+        gap: 1vw; 
+        margin-bottom: 2vw; 
+    }
+    footer {
+        position: relative;
+    }
+    #quiz-content {
+        padding: 1vw; 
+        gap: 2vw; 
+        grid-template-columns: 1fr;
+    }
+    #quiz-utility {
+        padding: 0vw 1vw 2vw 1vw; 
+        gap: 2vw; 
+        grid-template-columns: 1fr;
+    }
+    #answers {
+        gap: 1vw; 
+    }
+    .answer {
+        padding: 3vw; 
+    }
+    #scores {
+        gap: 1vw; 
+    }
+    .score {
+        padding: 1vw; 
+    }
+    .utility{
+        padding: 1vw;     
+    }
+}
 
 /* Media Query - Phone Targetting */
+
+@media (max-width: 480px) {
+
+    #answers {
+        grid-template-columns: 1fr;
+    }
+}
 
 
