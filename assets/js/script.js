@@ -96,10 +96,33 @@ function submitAnswer(answerIndex) {
     }
 }
 
-
 // Display stats and allow a category change
 function categoryChange() {
-    console.log("Change category!")
+
+    let correctPercent;
+    let total = correctTotal + incorrectTotal;
+    if (total === 0) {
+        correctPercent = 0; // To avoid division by zero
+    }
+    correctPercent = (correctTotal / total) * 100;
+
+    quizQuestion.innerHTML = `
+        <h2>Pick a New Category Below <br> or Restart for a Better Score!</h2>
+        <h3>You have played through ${numRounds} rounds!</h3>
+        <h3>Correct Answer Rate: ${correctPercent.toFixed(2)}%</h3>
+    `;
+
+    for (let i = 0; i < answers.length; i++) {
+        answers[i].classList.remove("correct", "incorrect");
+    }
+
+    for (let i = 0; i < answerArray.length; i++) {
+        answerArray[i].innerHTML = `${categoryNames[i]}`;
+    }
+    isShowingCategories = true;
+
+    categoryInfo.innerHTML = `Pick A Category Above`;
+
 }
 
 // Reset all values back to default and show welcome text
