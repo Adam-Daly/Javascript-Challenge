@@ -63,6 +63,8 @@ function fetchQuestionFromCategory(category) {
     for (let i = 0; i < answers.length; i++) {
         answers[i].classList.remove("correct", "incorrect");
     }
+
+    correctAnswer = randomQuestion.correctAnswer;
 }
 
 // Check the answer, update score and get the next question
