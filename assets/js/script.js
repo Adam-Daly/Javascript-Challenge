@@ -22,22 +22,6 @@ let incorrectTotal = 0;
 let currentCategory;
 let numRounds = 0;
 
-
-// set the category if categories are showing, otherwise check answer
-function answerBoxClicked(index) {
-    //console.log(isShowingCategories);
-    if (isShowingCategories === true) {
-        currentCategory = index;
-        categoryInfo.innerHTML = `Current Category: ${categoryNames[currentCategory]}`;
-        fetchQuestionFromCategory(currentCategory);
-        isShowingCategories = false;
-        numRounds++;
-    } else {
-        submitAnswer(index);
-    }
-}
-
-
 // Get a question from a specific category and set up the content
 function fetchQuestionFromCategory(category) {
     //console.log("data = ", data);
@@ -95,6 +79,20 @@ function submitAnswer(answerIndex) {
         categoryChange();
     } else {
         fetchQuestionFromCategory(currentCategory);
+    }
+}
+
+// set the category if categories are showing, otherwise check answer
+function answerBoxClicked(index) {
+    //console.log(isShowingCategories);
+    if (isShowingCategories === true) {
+        currentCategory = index;
+        categoryInfo.innerHTML = `Current Category: ${categoryNames[currentCategory]}`;
+        fetchQuestionFromCategory(currentCategory);
+        isShowingCategories = false;
+        numRounds++;
+    } else {
+        submitAnswer(index);
     }
 }
 
