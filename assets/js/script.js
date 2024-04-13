@@ -130,4 +130,29 @@ function categoryChange() {
 // Reset all values back to default and show welcome text
 function restartChallenge() {
 
+    quizQuestion.innerHTML = `
+        <h2>Welcome to <br>Javascript Challenge!</h2>
+        <h3>Choose a category below to get your first round of 10 questions:</h3>
+    `;
+
+    for (let i = 0; i < answers.length; i++) {
+        answers[i].classList.remove("correct", "incorrect");
+    }
+
+    for (let i = 0; i < answerArray.length; i++) {
+        answerArray[i].innerHTML = `${categoryNames[i]}`;
+    }
+    isShowingCategories = true;
+
+    correctTotal= 0;
+    incorrectTotal = 0;
+    correctScore.innerHTML = `Correct: ${correctTotal}`;
+    incorrectScore.innerHTML = `Incorrect: ${incorrectTotal}`;
+
+    categoryInfo.innerHTML = `Pick A Category Above`;
+
+    questionNumber = 0;
+
+    numRounds = 0;
+
 }
