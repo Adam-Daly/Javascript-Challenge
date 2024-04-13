@@ -21,6 +21,7 @@ let correctTotal = 0;
 let incorrectTotal = 0;
 let currentCategory;
 let numRounds = 0;
+let seenQuestions = [];
 
 // Get a question from a specific category and set up the content
 function fetchQuestionFromCategory(category) {
@@ -30,8 +31,16 @@ function fetchQuestionFromCategory(category) {
 
     //console.log("questions = ", questions);
 
-    // Choose a random question index, expected output is between 0 to questions.length - 1
-    let randomIndex = Math.floor(Math.random() * questions.length);
+    let randomIndex;
+    
+    // Choose a random question and make sure we havent seen it yet
+    do {
+        // Choose a random question index, expected output is between 0 to questions.length - 1
+        randomIndex = Math.floor(Math.random() * questions.length);
+    }
+    while (seenQuestions.includes(randomIndex));
+
+    seenQuestions.push(randomIndex);
 
     //console.log("randomIndex = ", randomIndex);
     
@@ -122,6 +131,9 @@ function categoryChange() {
     isShowingCategories = true;
 
     categoryInfo.innerHTML = `Pick A Category Above`;
+
+    // Reset seen questions
+    seenQuestions = [];
 
 }
 
