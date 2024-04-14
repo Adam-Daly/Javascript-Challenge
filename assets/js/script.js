@@ -9,6 +9,7 @@ const answerArray = [answer1, answer2, answer3, answer4];
 const correctScore = document.getElementById("correct-score");
 const incorrectScore = document.getElementById("incorrect-score");
 const categoryInfo = document.getElementById("category-info");
+const mascot = document.getElementById("mascot-image");
 
 // get the category names from data in questions.js
 const categoryNames = Object.keys(data);
@@ -58,6 +59,10 @@ function fetchQuestionFromCategory(category) {
     }
 
     correctAnswer = randomQuestion.correctAnswer;
+
+    //set mascot image to neutral
+    mascot.src = "assets/images/mascot-neutral.png";
+
 }
 
 // Check the answer, update score and get the next question
@@ -77,9 +82,11 @@ function submitAnswer(answerIndex) {
     if (answerArray[answerIndex].innerHTML === correctAnswer) {
         correctTotal++;
         correctScore.innerHTML = `Correct: ${correctTotal}`;
+        mascot.src = "assets/images/mascot-correct.png";
     } else {
         incorrectTotal++;
         incorrectScore.innerHTML = `Incorrect: ${incorrectTotal}`;
+        mascot.src = "assets/images/mascot-incorrect.png";
     }
 
     //console.log(correctAnswer);
@@ -151,6 +158,9 @@ function categoryChange() {
     // Reset seen questions
     seenQuestions = [];
 
+    // Change mascot to between round image
+    mascot.src = "assets/images/mascot-inbetween-rounds.png";
+
 }
 
 // Reset all values back to default and show welcome text
@@ -180,6 +190,9 @@ function restartChallenge() {
     questionNumber = 0;
 
     numRounds = 0;
+
+    // Set mascot image back to welcome
+    mascot.src = "assets/images/mascot-welcome.png";
 
 }
 
