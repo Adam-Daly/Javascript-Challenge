@@ -84,11 +84,27 @@ function submitAnswer(answerIndex) {
 
     //console.log(correctAnswer);
 
-    if (questionNumber % 10 === 0) {
-        categoryChange();
-    } else {
-        fetchQuestionFromCategory(currentCategory);
+    // remove onclick attribute to prevent spam clicking during wait
+    for (let i = 0; i < answers.length; i++) {
+        answers[i].removeAttribute("onclick");
     }
+
+    // wait for 2 seconds to show correct answer
+    // then enable clicking again
+    sleep(500)
+        .then(() => {
+            if (questionNumber % 10 === 0) {
+                categoryChange();
+            } else {
+                fetchQuestionFromCategory(currentCategory);
+            }
+        })
+        .then(() => {    
+            for (let i = 0; i < answers.length; i++) {
+                answers[i].setAttribute("onclick", "answerBoxClicked(" + i + ")");
+            }
+        });
+
 }
 
 // set the category if categories are showing, otherwise check answer
@@ -166,3 +182,8 @@ function restartChallenge() {
     numRounds = 0;
 
 }
+
+// function to wait for specificed amount, in milliseconds
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
