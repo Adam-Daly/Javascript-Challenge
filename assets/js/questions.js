@@ -701,15 +701,15 @@ const data = {
       correctAnswer: "parentNode"
     },
     {
-      question: "Which attribute is used to select multiple elements by class name in JavaScript?",
+      question: "Which property allows you to access the parent element of a given HTML element?",
       answers: [
-        "getElementsByClassName",
-        "getElementByClass",
-        "selectClass",
-        "queryClassName"
+      "parentNode",
+      "parentElement",
+      "parent()",
+      "element.parent()"
       ],
-      correctAnswer: "getElementsByClassName"
-    },
+      correctAnswer: "parentElement"
+      },
     {
       question: "Which method is used to get the first element that matches a specified CSS selector(s) in the document?",
       answers: [
