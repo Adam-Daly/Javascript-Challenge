@@ -147,7 +147,7 @@ const data = {
     {
       question: "What is the result of the expression 'Hello' + 'World' in JavaScript?",
       answers: [
-        "'HelloWorld'",
+        "'Hello''World'",
         "'Hello World'",
         "'Hello+World'",
         "'HelloWorld'"

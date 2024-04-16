@@ -107,7 +107,8 @@ h2, h3 {
     place-items: center;
 }
 
-.answer:hover {
+.answer:active,
+.answer:focus {
     background-color: #4A4E69;
 }
 
@@ -170,7 +171,8 @@ h2, h3 {
     background-color:#656e8d;
 }
 
-.utilities #restart:hover {
+.utilities #restart:hover:active,
+.utilities #restart:hover:focus {
     background-color: #4A4E69;
 }
 
@@ -235,5 +237,13 @@ h2, h3 {
 
     #answers {
         grid-template-columns: 1fr;
+    }
+}
+
+/* Hoverable elements only show up on devices that support it */
+@media (hover:hover) {
+    .answer:hover,
+    .utilities #restart:hover {
+        background-color: #4A4E69;
     }
 }
