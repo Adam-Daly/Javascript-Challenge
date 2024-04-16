@@ -671,14 +671,14 @@ const data = {
       correctAnswer: "appendChild"
     },
     {
-      question: "What is the correct syntax to add an event listener to an HTML element using JavaScript?",
+      question: "How can you remove an HTML element from the DOM using JavaScript?",
       answers: [
-        "element.addEventListener('event', function)",
-        "element.attachEvent('event', function)",
-        "element.onEvent('function')",
-        "element.listen('event', function)"
+      "element.remove()",
+      "element.delete()",
+      "element.removeChild()",
+      "element.erase()"
       ],
-      correctAnswer: "element.addEventListener('event', function)"
+      correctAnswer: "element.remove()"
     },
     {
       question: "Which method is used to remove a child HTML element from the DOM in JavaScript?",
@@ -731,14 +731,14 @@ const data = {
       correctAnswer: "value"
     },
     {
-      question: "What is the correct way to prevent the default behavior of an event in JavaScript?",
+      question: "What event is triggered when the user moves the mouse pointer over an HTML element?",
       answers: [
-        "event.preventDefault()",
-        "preventDefault(event)",
-        "event.stop()",
-        "stopEvent()"
+      "mouseenter",
+      "mouseover",
+      "mousemove",
+      "mousehover"
       ],
-      correctAnswer: "event.preventDefault()"
+      correctAnswer: "mouseover"
     },
     {
       question: "Which event is triggered when the user releases a key on the keyboard?",
@@ -823,12 +823,12 @@ const data = {
     {
       question: "What is the correct syntax to access the first child element of an HTML element in JavaScript?",
       answers: [
-        "element.first",
-        "element.firstElementChild",
-        "element.firstChild",
-        "element.child"
+        "first",
+        "firstElementChild",
+        "firstChild",
+        "child"
       ],
-      correctAnswer: "element.firstElementChild"
+      correctAnswer: "firstElementChild"
     }
   ]
 };
