@@ -114,7 +114,7 @@ Deployed via github pages
                 First message about unused variable "data" because it is from a separate file "questions.js". 
                 Second message for two unused functions as they are called directly in the html by an onclick event.
 
-    ![JShint](/assets/images/readme/JShint.png)
+    ![JShint](/assets/images/readme/jshint.png)
     
 
 # Bugs
