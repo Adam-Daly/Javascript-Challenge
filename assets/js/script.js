@@ -204,6 +204,9 @@ function restartChallenge() {
     // Reset rounds number
     numRounds = 0;
 
+    // Reset seen questions
+    seenQuestions = [];
+
     // Set mascot image back to welcome
     mascot.src = "assets/images/mascot-welcome.png";
 
